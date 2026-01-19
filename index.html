@@ -180,6 +180,76 @@
             font-size: 16px;
             line-height: 1.8;
         }
+        
+        /* Resumo do Atendimento */
+        .appointment-summary {
+            background: var(--bg-card);
+            border-left: 4px solid var(--primary);
+            border-top: 1px solid rgba(183, 139, 76, 0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            display: block;
+            width: 100%;
+        }
+        
+        .appointment-summary h2 {
+            color: var(--text-primary);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .appointment-summary h3 {
+            color: var(--text-primary);
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .appointment-summary p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .appointment-summary ul {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .appointment-summary li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .plan-item {
+            background: var(--primary-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-sm);
+            border-left: 3px solid var(--primary);
+            line-height: 1.6;
+        }
+        
+        .plan-item p {
+            margin: 0;
+        }
+        
+        .plan-item strong {
+            color: var(--primary-dark);
+            font-family: 'Poppins', sans-serif;
+        }
 
         /* Seções */
         .section {
@@ -617,7 +687,8 @@
             .exercise-card,
             .guidelines-card,
             .warnings-card,
-            .contact-card {
+            .contact-card,
+            .appointment-summary {
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
@@ -664,6 +735,61 @@
             </p>
         </section>
 
+        <!-- Resumo do Atendimento Clínico -->
+        <section class="appointment-summary">
+            <h2>
+                <i class="fas fa-clipboard-check"></i> Resumo do Atendimento Clínico
+            </h2>
+            <p>
+                <strong>Data do Atendimento:</strong> 19/01/2025<br>
+                <strong>Paciente:</strong> Giselle Midori Tamashiro<br>
+                <strong>Fisioterapeuta:</strong> Vitor Vaz (CREFITO 3: 297100)
+            </p>
+            
+            <h3>Plano de Ação</h3>
+            <div class="plan-item">
+                <strong>1. Mobilização Cicatricial</strong><br>
+                Realizar mobilização da cicatriz cirúrgica por 2 a 4 minutos, 2 vezes ao dia. 
+                Este procedimento ajuda a prevenir aderências e melhora a qualidade do tecido cicatricial.
+            </div>
+            <div class="plan-item">
+                <strong>2. Mobilização Ativa do Hálux</strong><br>
+                Iniciar exercícios de mobilização passiva e ativa do hálux conforme tolerância, 
+                seguindo a progressão estabelecida na cartilha.
+            </div>
+            <div class="plan-item">
+                <strong>3. Fortalecimento Progressivo</strong><br>
+                Iniciar exercícios de fortalecimento dos músculos intrínsecos do pé e estabilização 
+                conforme evolução do quadro.
+            </div>
+            <div class="plan-item">
+                <strong>4. Orientações Gerais</strong><br>
+                Manter uso da sandália rígida conforme orientação médica. Realizar exercícios com 
+                regularidade e respeitando os limites de dor. Em caso de dúvidas, entrar em contato.
+            </div>
+            
+            <h3>Próximas Sessões Agendadas</h3>
+            <div class="plan-item" style="background: #E8F5E9; border-left-color: #4CAF50;">
+                <strong><i class="fas fa-video" style="margin-right: 8px;"></i>Agendamento de Sessões via Google Meet</strong>
+                <p style="margin-top: 12px; margin-bottom: 8px;">
+                    <strong>Total de sessões:</strong> 4 sessões<br>
+                    <strong>Formato:</strong> Online via Google Meet<br>
+                    <strong>Duração estimada:</strong> 45-60 minutos por sessão<br><br>
+                    <strong>Calendário de Sessões:</strong><br>
+                    • <strong>1ª Sessão:</strong> 26/01/2025 às 12:15<br>
+                    • <strong>2ª Sessão:</strong> 02/02/2025 às 12:15<br>
+                    • <strong>3ª Sessão:</strong> 09/02/2025 às 12:15<br>
+                    • <strong>4ª Sessão:</strong> 16/02/2025 às 12:15
+                </p>
+                <p style="margin-top: 12px; margin-bottom: 0; font-size: 14px; color: var(--text-muted); padding-top: 8px; border-top: 1px solid rgba(76, 175, 80, 0.2);">
+                    <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
+                    <strong>Importante:</strong> O link da reunião será enviado por WhatsApp ou e-mail antes de cada sessão. 
+                    Certifique-se de ter uma conexão estável de internet e um ambiente adequado para realizar os exercícios. 
+                    Em caso de necessidade de reagendamento, entre em contato com antecedência.
+                </p>
+            </div>
+        </section>
+
         <!-- Fase 1: Mobilização Ativa -->
         <section class="section">
             <div class="phase-badge">
@@ -674,9 +800,45 @@
                 <h2>Mobilização e Alongamento</h2>
             </div>
             <div class="exercises-grid">
-                <!-- Exercício 1 -->
+                <!-- Exercício 1: Mobilização Cicatricial -->
                 <div class="exercise-card">
                     <div class="exercise-number">1</div>
+                    <h3 class="exercise-title">
+                        <i class="fas fa-hand-holding-medical exercise-icon"></i>
+                        Mobilização Cicatricial
+                    </h3>
+                    <div class="exercise-description">
+                        <p><strong>Como fazer:</strong></p>
+                        <p>Este exercício é fundamental para prevenir aderências e melhorar a qualidade da cicatriz após a cirurgia. Siga os passos abaixo:</p>
+                        <ul>
+                            <li>Lave bem as mãos antes de iniciar.</li>
+                            <li>Com os dedos indicador e polegar, segure suavemente a pele ao redor da cicatriz.</li>
+                            <li>Faça movimentos circulares suaves sobre a cicatriz, aplicando uma pressão leve.</li>
+                            <li>Mova a pele em diferentes direções: para cima, para baixo, para os lados e em círculos.</li>
+                            <li>Realize este procedimento por 2 a 4 minutos.</li>
+                            <li>Faça este exercício 2 vezes ao dia, preferencialmente após o banho quando a pele está mais macia.</li>
+                        </ul>
+                        <p><strong>Importante:</strong> A pressão deve ser suave, não deve causar dor intensa. Se a cicatriz ainda estiver com pontos ou muito sensível, aguarde a liberação médica ou reduza a intensidade do movimento.</p>
+                    </div>
+                    <div class="exercise-specs">
+                        <div class="exercise-specs-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2-4 minutos</span>
+                        </div>
+                        <div class="exercise-specs-item">
+                            <i class="fas fa-redo"></i>
+                            <span>2x/dia</span>
+                        </div>
+                        <div class="exercise-specs-item">
+                            <i class="fas fa-hand-holding-medical"></i>
+                            <span>Mobilização Cicatricial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercício 2: Mobilização do Hálux -->
+                <div class="exercise-card">
+                    <div class="exercise-number">2</div>
                     <h3 class="exercise-title">
                         <i class="fas fa-hand-holding exercise-icon"></i>
                         Mobilização do Hálux (Manual)
@@ -715,9 +877,9 @@
                     </div>
                 </div>
 
-                <!-- Exercício 2 -->
+                <!-- Exercício 3 -->
                 <div class="exercise-card">
-                    <div class="exercise-number">2</div>
+                    <div class="exercise-number">3</div>
                     <h3 class="exercise-title">
                         <i class="fas fa-compress-arrows-alt exercise-icon"></i>
                         Alongamento/Mobilização do Hálux e Antepé
@@ -747,9 +909,9 @@
                     </div>
                 </div>
 
-                <!-- Exercício 3 -->
+                <!-- Exercício 4 -->
                 <div class="exercise-card">
-                    <div class="exercise-number">3</div>
+                    <div class="exercise-number">4</div>
                     <h3 class="exercise-title">
                         <i class="fas fa-socks exercise-icon"></i>
                         Fortalecimento dos Músculos Intrínsecos do Pé – "Towel Scrunch"
@@ -801,9 +963,9 @@
                 <h2>Fortalecimento e Estabilização</h2>
             </div>
             <div class="exercises-grid">
-                <!-- Exercício 4 -->
+                <!-- Exercício 5 -->
                 <div class="exercise-card">
-                    <div class="exercise-number">4</div>
+                    <div class="exercise-number">5</div>
                     <h3 class="exercise-title">
                         <i class="fas fa-fingerprint exercise-icon"></i>
                         Flexão e Extensão Ativa do Hálux
